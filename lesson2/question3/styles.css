@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 100%;
+    background-color:rgba(16, 113, 177, 0.10);
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+}
+
+a {
+    margin: 10px;
+}
+
+.burger-form {
+    display: flex;
+}
+
+input {
+    margin-left: 20px;
+}
+
+.topping {
+    margin: 20px 0px;
+}
+
+.hidden {
+    display: none;
+}
