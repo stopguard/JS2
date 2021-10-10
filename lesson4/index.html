@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eShop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <button class="replace-button" type="button">Заменить ' на "</button>
+    </header>
+    <main>
+        <textarea class="text-for-replace" rows="5" cols="50">'asdsad' 'fdsfdsfdsf'? dfdsf 'fdsfdsf gfg'f fgfdgfd!'</textarea>
+        <div class="form"><form action="#">
+            <h3>Форма обратной связи</h3>
+            <label for="name">Имя</label><br>
+            <input id="name" name="name" placeholder="Введите своё имя"><span class="fail hidden name">Можно вводить только буквы!</span><br>
+            <label for="phone">Телефон</label><br>
+            <input id="phone" name="phone" placeholder="+7(000)000-0000"><span class="fail hidden phone">Требуемый формат: +7(000)000-0000</span><br>
+            <label for="mail">E-mail</label><br>
+            <input id="mail" name="mail" placeholder="my-mail@mail.ru"><span class="fail hidden mail">Некорректное значение e-mail!</span><br>
+            <label for="form-text">Текст</label><br>
+            <textarea class="form-text" rows="5" cols="50" placeholder="Текст сообщения"></textarea><br>
+            <input type="submit">
+        </form></div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
