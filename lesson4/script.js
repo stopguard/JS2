@@ -14,7 +14,7 @@ $replaceBtn.addEventListener( 'click', event => {
 
 // third question
 const checkNameRe = new RegExp(/^[a-zа-яё]+$/, 'gi');
-const checkPhoneRe = new RegExp(/^\+7\([0-9]{3}\)[0-9]{3}-?[0-9]{4}$/, 'g');                // https://regex101.com/r/8ao3ez/1
+const checkPhoneRe = new RegExp(/^\+7 ?\([0-9]{3}\) ?[0-9]{3}-?[0-9]{4}$/, 'g');                // https://regex101.com/r/8ao3ez/1
 const checkMailRe1 = new RegExp(/^[a-z]+[-a-z._]+[a-z]+@[a-z]+[-a-z.]+\.[a-z]{2,4}$/, 'gi');  // https://regex101.com/r/Lbs2iA/1
 const checkMailRe2 = new RegExp(/[-._][-._]/, 'g');
 
