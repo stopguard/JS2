@@ -33,12 +33,12 @@ class Items {
                 return response.json();
             })
             .then((request) => {
-                this.goods = request.map(item => new Product(item))
+                this.goods = request.map(item => new Product(item));
                 this.render(target);
             })
             .catch((err) => {
-                console.log(err)
-            })
+                console.log(err);
+            });
     }
 
     /** insert this as html-code to target
@@ -56,7 +56,7 @@ class Items {
             el.addEventListener('click', function add(event) {
                 event.preventDefault();
                 products.addToBasket(event.target.id);
-            })
+            });
         });
     }
 
@@ -125,7 +125,7 @@ class Cart {
                 this.render(target);
             })
             .catch((err) => {
-                console.log(err.text)
+                console.log(err.text);
             })
     }
 
@@ -146,9 +146,8 @@ class Cart {
         target.querySelectorAll('a.delete').forEach(el => {
             el.addEventListener('click', function del(event) {
                 event.preventDefault();
-                console.log(event.target.id)
                 products.delFromBasket(event.target.id);
-            })
+            });
         });
     }
 
