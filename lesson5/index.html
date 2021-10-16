@@ -36,16 +36,16 @@
       <div class="cart" v-if="isVisibleCart">
         <template v-if="cart.contents.length">
           <div class="goods-list">
-          <div class="good-item" v-for="item of cart.contents">
-            <h3>{{ item.product_name }}</h3>
-            <p>{{ item.price }} руб.</p>
-            <p>{{ item.quantity }} ед.</p>
-            <a href="#" v-bind:id="`del${item.id_product}`" class="delete" @click="delFromCart">Удалить</a>
+            <div class="good-item" v-for="item of cart.contents">
+              <h3>{{ item.product_name }}</h3>
+              <p>{{ item.price }} руб.</p>
+              <p>{{ item.quantity }} ед.</p>
+              <a href="#" v-bind:id="`del${item.id_product}`" class="delete" @click="delFromCart">Удалить</a>
+            </div>
           </div>
-        </div>
-        <div class="cart-cost">
-          <p>Товаров в корзине - {{ cart.countGoods }} ед. на сумму {{ cart.amount }} руб.</p>
-        </div>
+          <div class="cart-cost">
+            <p>Товаров в корзине - {{ cart.countGoods }} ед. на сумму {{ cart.amount }} руб.</p>
+          </div>
         </template>
         <template v-else>
           <p>Здесь пока ничего нет</p>

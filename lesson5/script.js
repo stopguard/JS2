@@ -41,13 +41,13 @@ new Vue({
         .then((data) => {
           this.goods = data;
           this.filteredGoods = data;
-          this.searchLine = ''
+          this.searchLine = '';
         });
     },
 
     filterGoods() {
-      let re = new RegExp(this.searchLine, 'i')
-      this.filteredGoods = this.goods.filter(item => item.product_name.match(re))
+      let re = new RegExp(this.searchLine, 'i');
+      this.filteredGoods = this.goods.filter(item => item.product_name.match(re));
     },
 
     addToCart(event) {
@@ -79,7 +79,7 @@ new Vue({
     },
 
     toggleCart() {
-      this.isVisibleCart = !this.isVisibleCart
+      this.isVisibleCart = !this.isVisibleCart;
     },
 
     delFromCart(event) {
@@ -102,5 +102,5 @@ new Vue({
   mounted() {
     this.fetchGoods();
     this.fetchCart();
-  }
-})
+  },
+});
