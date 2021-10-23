@@ -1,7 +1,7 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+import Vue from 'vue';
+import Vuex from 'vuex';
 
-Vue.use(Vuex)
+Vue.use(Vuex);
 
 const API_URL = "http://localhost:8080";
 const API_CATALOG = "/catalog";
@@ -39,7 +39,7 @@ export default new Vuex.Store({
       state.filteredGoods = goods;
     },
     setFiltered: (state, filteredGoods) => {
-      state.filteredGoods = filteredGoods
+      state.filteredGoods = filteredGoods;
     },
     setErrors: (state, ifError, txt) => {
       state.noErrors = ifError;
@@ -59,7 +59,7 @@ export default new Vuex.Store({
         })
         .catch(() => {
           commit('setErrors', true, "Загрузка списка товаров не удалась");
-        })
+        });
     },
 
     filterGoods({ commit, state }, filter) {
@@ -120,5 +120,5 @@ export default new Vuex.Store({
         });
     },
 
-  }
-})
+  },
+});

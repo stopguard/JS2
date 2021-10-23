@@ -25,7 +25,7 @@ app.get('/catalog', (req, res) => {
 app.get('/cart', (req, res) => {
   fs.readFile('db/cart.json', 'utf-8', (err, data) => {
     // лень переписывать обработку запросов на клиентской стороне поэтому так
-    let cart = JSON.parse(data)
+    let cart = JSON.parse(data);
     let products = fs.readFileSync('db/catalog.json', { encoding: 'utf-8' });
     products = JSON.parse(products);
     let result = {
@@ -42,7 +42,7 @@ app.get('/cart', (req, res) => {
       }
       result.amount += cartItem.price * count;
       result.countGoods += count;
-      result.contents.push(cartItem)
+      result.contents.push(cartItem);
     }
     res.send(result);
   });

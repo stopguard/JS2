@@ -12,7 +12,7 @@
 export default {
   computed: {
     errors() {
-      return this.$store.getters.getErrors
+      return this.$store.getters.getErrors;
     }
   },
   methods: {
@@ -20,5 +20,5 @@ export default {
       this.$store.dispatch("setErrors", true, "");
     },
   },
-}
+};
 </script>

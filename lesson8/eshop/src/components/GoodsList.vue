@@ -27,8 +27,8 @@ export default {
       return this.$store.getters.getGoods;
     },
     errors() {
-      return this.$store.getters.getErrors
-    }
+      return this.$store.getters.getErrors;
+    },
   },
 };
 </script>
