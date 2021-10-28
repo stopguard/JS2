@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>eShop</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- 
+   * 1. Вынести поиск в отдельный компонент.
+   * 2. Вынести корзину в отдельный компонент.
+   * 3. * Создать компонент с сообщением об ошибке. 
+   *    Компонент должен отображаться, когда не удаётся выполнить запрос к серверу. 
+  -->
+  <div id="app">
+    <header>
+
+      <search 
+        @search="filterGoods"
+        @refresh="fetchGoods"
+      ></search>
+
+    </header>
+
+    <main>
+
+      <errors
+        @clear="clearErrors"
+        v-bind:no_errors="noErrors"
+        v-bind:error_text="errorText"
+      ></errors>
+
+      <goods-list
+        @update_cart="fetchCart"
+        v-bind:list="filteredGoods"
+        v-bind:no_errors="noErrors"
+      ></goods-list>
+
+      <cart
+        @update_cart="fetchCart"
+        @toggle="toggleCart"
+        v-bind:list="cart.contents"
+        v-bind:count_goods="cart.countGoods"
+        v-bind:amount="cart.amount"
+        v-bind:visible="isVisibleCart"
+        v-bind:no_errors="noErrors"
+      ></cart>
+
+    </main>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script src="source/api.js"></script>
+  <script src="source/products.js"></script>
+  <script src="source/cart.js"></script>
+  <script src="source/utils.js"></script>
+  <script src="source/app.js"></script>
+</body>
+
+</html>
